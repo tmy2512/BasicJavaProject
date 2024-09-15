@@ -1,0 +1,103 @@
+<div class="open-table">
+  <div class="col-sm-8">
+    <h2>Department <b>Details</b></h2>
+  </div>
+  <div class="add-new">
+    <button type="button" class="btn btn-primary" onclick="openAddModal()">
+      <i class="fa-solid fa-plus"></i>Add
+    </button>
+  </div>
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputAmount"
+      placeholder="Search"
+    />
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default" onclick="buildTable()">
+        Go!
+      </button>
+    </span>
+  </div>
+  <div class="sorting">
+    <span
+      ><button
+        class="fa-solid fa-arrow-down"
+        id="down"
+        onclick="sortDown()"
+      ></button
+    ></span>
+    <span
+      ><button class="fa-solid fa-arrow-up" id="up" onclick="sortUp()"></button
+    ></span>
+  </div>
+</div>
+<div class="display">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <!-- <th>STT</th> -->
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+      <!-- <tr>
+        <td>John Doe</td>
+        <td>Administration</td>
+        <td>(171) 555-2222</td>
+        <td>
+          <a class="add" title="Add" data-toggle="tooltip"
+            ><i class="material-icons">&#xE03B;</i></a
+          >
+          <a class="edit" title="Edit" data-toggle="tooltip"
+            ><i class="fa-solid fa-pen"></i
+          ></a>
+          <a class="delete" title="Delete" data-toggle="tooltip"
+            ><i class="fa-solid fa-trash"></i
+          ></a>
+        </td>
+      </tr> -->
+    </tbody>
+  </table>
+  <div id="paging"></div>
+</div>
+<div id="myModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="modal-title" class="modal-title">Create new employee</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          style="border: none"
+        >
+          x
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="id" name="id" />
+        <label for="name">Ten phong ban</label> <br />
+        <input type="text" id="name" name="name" /><br />
+        <p id="error" style="display: none; color: red">
+          Please fill out all fields
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button
+          id="btn-primary"
+          type="button"
+          class="btn btn-primary"
+          onclick="save()"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

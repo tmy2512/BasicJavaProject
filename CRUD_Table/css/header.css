@@ -1,0 +1,27 @@
+#header {
+  height: fit-content;
+  width: 100%;
+}
+.open {
+  height: fit-content;
+}
+.open .navbar {
+  position: fixed;
+  top: 0;
+  transition: top 0.3s;
+  background-color: #000 !important;
+}
+.open li:hover {
+  background-color: grey;
+}
+.open nav {
+  padding: 0;
+}
+.open .nav-item {
+  color: #fff;
+}
+.greeting {
+  text-align: center;
+  background-color: darkgrey;
+  margin-top: 40px;
+}
